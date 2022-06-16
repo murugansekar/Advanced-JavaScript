@@ -13,8 +13,14 @@ Ans:-When multiple callback functions are ready to be executed they need to exec
 
 5)Continue watching uptill 36th min. Explain how does fetch work when clubbed with cb.
 Ans:-fetch is an Web APi which is used to make network calls to server. The fetch callback function waits untill data is returned from server. When fetch Callback function is ready to be executed it gets pushed into Microtask queue which has higher priority than callback queue to enter into CallStack via event loop
+
 6) Complete the video What is microtask queue and how is it different
 Microtask queue has higher priority than callback queue to enter into CallStack via event loop. when multiple functions are present in Microtask queue, the microtask queue gets emptied first before general callback queue. CallBack functions comig from promises and mutation observers will alone be queued in Multitask queue
+
 7)What is starvation ?
 When Multiple micro tasks or functions are created recursively in microtask queue, it never gets empty and the general callback queue never gets an opportunity to enter Callstack. This is called starvation
+Why is a callback queue used and not a callback stack?
+When multiple callback functions are ready to be executed they need to executed in the FIFO order to ensure sequence. So it is callback queue and not a callback stack
+Explain how does event loop handle async code? why does it not wait for async function?
+Event Loop does not wait until async code gets completed. It says to callback once async function get coomplted
 */
